@@ -1,12 +1,12 @@
 <template>
-<div>
+<div >
   <router-link to="/">Home</router-link>
 
 
- <div>
-    <div id="policies">
+ 
+    <div id="documents">
 
-            <table id="policies-table" class="table table-striped table-bordered" style="width:100%">
+            <table id="documents-table" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -22,7 +22,7 @@
                         <td>{{doc.Type}}</td>
                         <td>{{doc.Size}}</td>
                         <td>{{doc.Location}}</td>
-                        <td><a v-bind:href="doc.DownloadLink" download="download" target="_blank">download me</a></td>
+                        <td><a v-bind:href="doc.DownloadLink" target="_blank">Download me</a></td>
                     </tr>
                 </tbody>
                 <tfoot>
@@ -39,7 +39,7 @@
         </div>
 </div>
 
-</div>
+
 </template>
 
 <script>
@@ -60,12 +60,27 @@ import json from './../json/policy-owners.json'
     }
   };
   $(document).ready(function () {
-            $('#policies-table').DataTable({
+        $('#documents-table').DataTable({
             });
         });
 
 </script>
 
 <style>
+<style>
+body {
+        background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg") no-repeat center center
+    }
+
+    #documents {
+        padding-left: 15em;
+        padding-right: 15em;
+        padding-top: 1em;
+    }
+
+    #documents-table {
+        background-color: white;
+    }</style>
+
 </style>
 

@@ -18,7 +18,7 @@
                         <td>{{policy.FirstName}}</td>
                         <td>{{policy.LastName}}</td>
                         <td>{{policy.Age}}</td>
-                        <td><router-link :to="{name: 'documents', params: {policyNum: policy.PolicyNumber}}">Home</router-link></td>
+                        <td><router-link :to="{name: 'documents', params: {policyNum: policy.PolicyNumber}}">See Uploaded Documents</router-link></td>
 
                     </tr>
                 </tbody>
@@ -48,7 +48,8 @@ export default {
         json1:{a:"b",c:"d"},
         myJson: json
       };
-    }
+    },
+    
   };
   $(document).ready(function () {
             $('#policies-table').DataTable({
