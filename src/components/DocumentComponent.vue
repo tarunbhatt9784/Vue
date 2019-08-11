@@ -9,26 +9,29 @@
             <table id="policies-table" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Policy Number</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Age</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Size</th>
+                        <th>Location</th>
+                        <th>Download Link</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="policy in myJson.policies">
-                        <td>{{policy.PolicyNumber}}</td>
-                        <td>{{policy.FirstName}}</td>
-                        <td>{{policy.LastName}}</td>
-                        <td>{{policy.Age}}</td>
+                    <tr v-for="doc in myJson.policies[0].Documents">
+                        <td>{{doc.Name}}</td>
+                        <td>{{doc.Type}}</td>
+                        <td>{{doc.Size}}</td>
+                        <td>{{doc.Location}}</td>
+                        <td><a v-bind:href="doc.DownloadLink" download="download" target="_blank">download me</a></td>
                     </tr>
                 </tbody>
                 <tfoot>
-                    <tr>
-                        <th>Policy Number</th>
-                        <th>Fir st Name</th>
-                        <th>Last Name</th>
-                        <th>Age</th>
+                     <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Size</th>
+                        <th>Location</th>
+                        <th>Download Link</th>
                     </tr>
                 </tfoot>
             </table>
