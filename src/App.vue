@@ -1,22 +1,14 @@
 <template>
   <div id="app">
-      <PolicyComponent/>
-</div>
+    
+    <router-view />
+  </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import PolicyComponent from './components/PolicyComponent.vue'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld,
-    PolicyComponent
-  }
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
