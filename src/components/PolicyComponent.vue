@@ -1,5 +1,6 @@
 <template>
 <div>
+
     <div id="policies">
 
             <table id="policies-table" class="table table-striped table-bordered" style="width:100%">
@@ -34,6 +35,8 @@
             </table>
 
         </div>
+          <p>{{ reversedMessage }}</p>
+
 </div>
 </template>
 
@@ -49,12 +52,20 @@ export default {
         myJson: json
       };
     },
-    
-  };
-  $(document).ready(function () {
+    computed: {
+    // a computed getter
+    reversedMessage: function () {
+      // `this` points to the vm instance
+      $(document).ready(function () {
             $('#policies-table').DataTable({
             });
         });
+      return ''
+    }
+  }
+    
+  };
+  
 </script>
 
 <style>

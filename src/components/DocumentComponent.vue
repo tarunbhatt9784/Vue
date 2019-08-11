@@ -1,10 +1,10 @@
 <template>
 <div >
-  <router-link to="/">Home</router-link>
 
 
  
     <div id="documents">
+            <router-link to="/"><font-awesome-icon icon="home" /></router-link>
 
             <table id="documents-table" class="table table-striped table-bordered" style="width:100%">
                 <thead>
@@ -37,6 +37,7 @@
             </table>
 
         </div>
+            <p>{{ refresh }}</p>
 </div>
 
 
@@ -57,25 +58,31 @@ import json from './../json/policy-owners.json'
         json1:{a:"b",c:"d"},
         myJson: json
       };
-    }
-  };
-  $(document).ready(function () {
+    },
+   computed: { refresh: function () {
+      // `this` points to the vm instance
+       $(document).ready(function () {
         $('#documents-table').DataTable({
             });
         });
+      return ''
+    }
+  }
+  };
+ 
 
 </script>
 
 <style>
-<style>
-body {
-        background: url("https://mdbootstrap.com/img/Photos/Others/img (50).jpg") no-repeat center center
-    }
 
     #documents {
         padding-left: 15em;
         padding-right: 15em;
         padding-top: 1em;
+        text-align:left;
+    }
+    #documents > a{
+      color: black;
     }
 
     #documents-table {
