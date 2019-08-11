@@ -5,7 +5,7 @@ const routes = [
     { path: '/', component: PolicyComponent },
     { path: '/policy', component: PolicyComponent },
 
-    { path: '/documents/:policyNum', component: DocumentComponent }
+    { path: '/documents/:policyNum', component: DocumentComponent, name:'documents' }
 ];
 
 export default routes;

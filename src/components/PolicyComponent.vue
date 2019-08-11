@@ -9,6 +9,7 @@
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Age</th>
+                        <th>Detailed Documentation</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -17,6 +18,8 @@
                         <td>{{policy.FirstName}}</td>
                         <td>{{policy.LastName}}</td>
                         <td>{{policy.Age}}</td>
+                        <td><router-link :to="{name: 'documents', params: {policyNum: policy.PolicyNumber}}">Home</router-link></td>
+
                     </tr>
                 </tbody>
                 <tfoot>
@@ -25,6 +28,7 @@
                         <th>Fir st Name</th>
                         <th>Last Name</th>
                         <th>Age</th>
+                        <th>Detailed Documentation</th>
                     </tr>
                 </tfoot>
             </table>
